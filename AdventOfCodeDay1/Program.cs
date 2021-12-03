@@ -8,7 +8,8 @@ namespace AdventOfCodeDay1
     {
         static void Main(string[] args)
         {
-            CalculateMeasurements();
+            CalculateMeasurements(); // Answer for Part 1
+            CalculateSumOfMeasurements(); // Answer for Part 2
         }
 
         static int CalculateMeasurements()
@@ -25,6 +26,33 @@ namespace AdventOfCodeDay1
                 else if (measurements[i] < measurements[i + 1])
                 {
                     numberOfLargerMeasurements++;
+                }
+            }
+
+            Console.WriteLine(numberOfLargerMeasurements);
+            return numberOfLargerMeasurements;
+        }
+
+        static int CalculateSumOfMeasurements()
+        {
+            var numberOfLargerMeasurements = 0;
+            var measurements = ParseInput();
+
+            for (int i = 0; i < measurements.Length; i++)
+            {
+                try
+                {
+                    int sumOne = measurements[i] + measurements[i + 1] + measurements[i + 2];
+                    int sumTwo = measurements[i + 1] + measurements[i + 2] + measurements[i + 3];
+
+                    if (sumOne < sumTwo)
+                    {
+                        numberOfLargerMeasurements++;
+                    }
+                }
+                catch
+                {
+                    break;
                 }
             }
 
