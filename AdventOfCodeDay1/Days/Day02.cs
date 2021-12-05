@@ -11,6 +11,7 @@ namespace AdventOfCode2021.Days
     {
         public int distance = 0;
         public int depth = 0;
+        public int aim = 0;
 
         public void CalculateAnswer()
         {
@@ -21,14 +22,17 @@ namespace AdventOfCode2021.Days
                 if ((string)move[0] == "f")
                 {
                     distance += (int)move[1];
+
+                    int currentAim = aim * (int)move[1];
+                    depth += currentAim;
                 }
                 else if ((string)move[0] == "d")
                 {
-                    depth += (int)move[1];
+                    aim += (int)move[1];
                 }
                 else
                 {
-                    depth -= (int)move[1];
+                    aim -= (int)move[1];
                 }
             }
 
