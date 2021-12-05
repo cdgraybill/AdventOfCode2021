@@ -9,9 +9,9 @@ namespace AdventOfCode2021
     {
         static void Main(string[] args)
         {
-            Day02 dayTwo = new Day02();
+            Day03 day = new Day03();
 
-            dayTwo.CalculateAnswer();
+            day.CalculatePowerConsumption();
         }
     }
 }
