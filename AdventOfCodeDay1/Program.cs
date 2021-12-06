@@ -11,7 +11,7 @@ namespace AdventOfCode2021
         {
             Day03 day = new Day03();
 
-            day.CalculatePowerConsumption();
+            day.CalculateLifeSupport();
         }
     }
 }
